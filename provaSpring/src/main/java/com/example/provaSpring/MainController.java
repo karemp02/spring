@@ -1,0 +1,50 @@
+package com.example.provaSpring;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+
+@Controller
+public class MainController {
+
+	@Autowired
+	ActorService as;
+
+	@RequestMapping ("/")
+
+	public String index () {
+
+		return "index";
+	}
+
+	@RequestMapping ("/pippo")
+
+public String pippo () {
+
+		return "pippo";
+	}
+
+	@GetMapping("lista")
+	public List findall() {
+		List ls=as.findAll();
+		System.out.println(ls);
+		return ls;
+	}
+	
+	
+	    @GetMapping("/lista2")
+	    public ModelAndView example() {
+	    	List ls=as.findAll();
+	        ModelAndView modelAndView = new ModelAndView("tutti.jsp");
+	        modelAndView.addObject("message",ls);
+	        
+	        return modelAndView;
+	    }
+	}
+
+
