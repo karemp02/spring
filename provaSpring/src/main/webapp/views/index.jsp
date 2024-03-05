@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>ciao </h1>
-<a href="lista">tutti gli attori</a>
+<a href="lista2">tutti gli attori</a>
 </body>
 </html>

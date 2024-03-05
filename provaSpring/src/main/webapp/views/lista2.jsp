@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ page import="java.util.List" %>
+<%--   <%@ page import="MainController.java"%> --%>
     <%@ page import="org.springframework.web.servlet.ModelAndView" %>
 <!DOCTYPE html>
 <html>
@@ -11,8 +12,8 @@
 </head>
 <body>
 
-
-<p>${ls}</p>;
+ciao
+<p>${message}</p>;
 
 
 </body>
